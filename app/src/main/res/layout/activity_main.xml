@@ -8,15 +8,15 @@ android:layout_height="match_parent"
 android:background="#434345"
 tools:context=".MainActivity">
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Tap The Unique"
-    android:textColor="@color/PeachPuff"
-    android:textSize="35dp"
-    android:textAlignment="center"
-    android:layout_marginTop="50dp"
-    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Tap The Unique"
+        android:fontFamily="@font/montserrat_bold"
+        android:textAlignment="center"
+        android:textColor="@color/PeachPuff"
+        android:textSize="35dp" />
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -26,6 +26,7 @@ tools:context=".MainActivity">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Time Left: "
+        android:fontFamily="@font/montserrat"
         android:textSize="20sp"
         android:textColor="@color/white"
         android:layout_marginLeft="200dp"
@@ -36,6 +37,7 @@ tools:context=".MainActivity">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="30"
+        android:fontFamily="@font/montserrat"
         android:layout_marginTop="30sp"
         android:textSize="20sp"
         android:textColor="@color/white"
@@ -83,17 +85,17 @@ tools:context=".MainActivity">
         android:layout_marginRight="1sp"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:background="@color/Brown"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginTop="1sp"
-        android:textColor="@color/white"
+
         android:text="1" />
 
     <Button
         android:layout_marginRight="1sp"
         android:id="@+id/b12"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
-
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
@@ -103,8 +105,8 @@ tools:context=".MainActivity">
         android:layout_marginRight="1sp"
         android:id="@+id/b13"
         android:layout_width="50dp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
         android:text="3"/>
@@ -112,8 +114,8 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b14"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
@@ -122,8 +124,8 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b15"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
@@ -132,8 +134,8 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b16"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
@@ -142,8 +144,8 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b17"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginTop="1sp"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
@@ -152,14 +154,15 @@ tools:context=".MainActivity">
 </LinearLayout>
 
 <LinearLayout
+    android:padding="5dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:gravity="center_horizontal">
 
     <Button
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginRight="1sp"
         android:id="@+id/b21"
         android:layout_width="50dp"
@@ -170,8 +173,8 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b22"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
@@ -180,8 +183,8 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b23"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
@@ -190,8 +193,8 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b24"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
@@ -200,8 +203,8 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b25"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
@@ -209,8 +212,8 @@ tools:context=".MainActivity">
 
     <Button
         android:id="@+id/b26"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginRight="1sp"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
@@ -220,8 +223,8 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b27"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
@@ -239,16 +242,16 @@ tools:context=".MainActivity">
         android:id="@+id/b31"
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
         android:layout_marginTop="1sp"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_height="wrap_content"
         android:text="1"/>
 
     <Button
         android:id="@+id/b32"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginRight="1sp"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
@@ -258,17 +261,17 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b33"
         android:layout_width="50dp"
-        android:background="@color/Brown"
         android:layout_marginRight="1sp"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
         android:text="3"/>
 
     <Button
         android:id="@+id/b34"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginRight="1sp"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
@@ -278,8 +281,8 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b35"
         android:layout_width="50dp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
@@ -288,8 +291,8 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b36"
         android:layout_width="50dp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_height="wrap_content"
         android:layout_marginTop="1sp"
         android:layout_marginRight="1sp"
@@ -298,8 +301,8 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b37"
         android:layout_width="50dp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
         android:layout_marginRight="1sp"
@@ -316,8 +319,8 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b41"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
@@ -327,8 +330,8 @@ tools:context=".MainActivity">
         android:id="@+id/b42"
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
         android:text="2"/>
@@ -338,16 +341,15 @@ tools:context=".MainActivity">
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_height="wrap_content"
         android:text="3"/>
 
     <Button
         android:id="@+id/b44"
-
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
@@ -358,8 +360,8 @@ tools:context=".MainActivity">
         android:id="@+id/b45"
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
         android:text="5"/>
@@ -370,16 +372,16 @@ tools:context=".MainActivity">
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:text="6"/>
 
     <Button
         android:id="@+id/b47"
-        android:background="@color/Brown"
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:text="7"/>
@@ -394,8 +396,8 @@ tools:context=".MainActivity">
 
     <Button
         android:id="@+id/b51"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginRight="1sp"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
@@ -404,8 +406,8 @@ tools:context=".MainActivity">
 
     <Button
         android:id="@+id/b52"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
@@ -415,10 +417,10 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b53"
         android:layout_width="50dp"
-        android:background="@color/Brown"
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_height="wrap_content"
         android:text="3"/>
 
@@ -426,8 +428,8 @@ tools:context=".MainActivity">
         android:id="@+id/b54"
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
         android:text="4"/>
@@ -435,18 +437,18 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b55"
         android:layout_width="50dp"
-        android:background="@color/Brown"
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_height="wrap_content"
         android:text="5"/>
 
     <Button
         android:layout_marginTop="1sp"
         android:id="@+id/b56"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
         android:layout_height="wrap_content"
@@ -454,8 +456,8 @@ tools:context=".MainActivity">
 
     <Button
         android:layout_marginTop="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:id="@+id/b57"
         android:layout_marginRight="1sp"
         android:layout_width="50dp"
@@ -474,8 +476,8 @@ tools:context=".MainActivity">
 
     <Button
         android:id="@+id/b61"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginRight="1sp"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
@@ -484,8 +486,8 @@ tools:context=".MainActivity">
 
     <Button
         android:id="@+id/b62"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
@@ -495,10 +497,10 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b63"
         android:layout_width="50dp"
-        android:background="@color/Brown"
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_height="wrap_content"
         android:text="3"/>
 
@@ -506,8 +508,8 @@ tools:context=".MainActivity">
         android:id="@+id/b64"
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
         android:text="4"/>
@@ -515,18 +517,18 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b65"
         android:layout_width="50dp"
-        android:background="@color/Brown"
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_height="wrap_content"
         android:text="5"/>
 
     <Button
         android:layout_marginTop="1sp"
         android:id="@+id/b66"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
         android:layout_height="wrap_content"
@@ -534,8 +536,8 @@ tools:context=".MainActivity">
 
     <Button
         android:layout_marginTop="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:id="@+id/b67"
         android:layout_marginRight="1sp"
         android:layout_width="50dp"
@@ -553,8 +555,8 @@ tools:context=".MainActivity">
 
     <Button
         android:id="@+id/b71"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginRight="1sp"
         android:layout_width="50dp"
         android:layout_marginTop="1sp"
@@ -563,8 +565,8 @@ tools:context=".MainActivity">
 
     <Button
         android:id="@+id/b72"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
@@ -574,10 +576,10 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b73"
         android:layout_width="50dp"
-        android:background="@color/Brown"
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_height="wrap_content"
         android:text="3"/>
 
@@ -585,8 +587,8 @@ tools:context=".MainActivity">
         android:id="@+id/b74"
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_marginTop="1sp"
         android:layout_height="wrap_content"
         android:text="4"/>
@@ -594,18 +596,18 @@ tools:context=".MainActivity">
     <Button
         android:id="@+id/b75"
         android:layout_width="50dp"
-        android:background="@color/Brown"
         android:layout_marginRight="1sp"
         android:layout_marginTop="1sp"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_height="wrap_content"
         android:text="5"/>
 
     <Button
         android:layout_marginTop="1sp"
         android:id="@+id/b76"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:layout_width="50dp"
         android:layout_marginRight="1sp"
         android:layout_height="wrap_content"
@@ -613,8 +615,8 @@ tools:context=".MainActivity">
 
     <Button
         android:layout_marginTop="1sp"
-        android:background="@color/Brown"
-        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:textColor="@color/Black"
         android:id="@+id/b77"
         android:layout_marginRight="1sp"
         android:layout_width="50dp"
