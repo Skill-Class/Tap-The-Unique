@@ -38,7 +38,7 @@ tools:context=".MainActivity">
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
                 android:text="Time Left: "
-                android:textColor="@color/white"
+                android:textColor="@color/PeachPuff"
                 android:textSize="20sp" />
 
             <TextView
@@ -62,7 +62,7 @@ tools:context=".MainActivity">
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Score: "
-                android:textColor="@color/white"
+                android:textColor="@color/PeachPuff"
                 android:textSize="20sp" />
 
             <TextView
