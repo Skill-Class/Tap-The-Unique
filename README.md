@@ -64,11 +64,13 @@ $ git clone https://github.com/Skill-Class/Tap-The-Unique.git
 
 <div align="center">
 <img src="https://github.com/Skill-Class/Tap-The-Unique/blob/master/Android%20Mobile%20%E2%80%93%204.png" >
+</div>
 
 4) Result Screen
 
 <div align="center">
 <img src="https://github.com/Skill-Class/Tap-The-Unique/blob/master/Android%20Mobile%20%E2%80%93%205.png" >
+</div>
 
 ### Contributing - Hacktoberfest 2020 🎃
 
