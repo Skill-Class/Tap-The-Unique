@@ -85,6 +85,8 @@
 
         <LinearLayout style="@style/ButtonLinearLayout">
 
+            <Space style="@style/SpaceStyle" />
+
             <Button
                 android:id="@+id/b11"
                 style="@style/ButtonStyle"
@@ -132,9 +134,13 @@
                 style="@style/ButtonStyle"
                 tools:text="7" />
 
+            <Space style="@style/SpaceStyle" />
+
         </LinearLayout>
 
         <LinearLayout style="@style/ButtonLinearLayout">
+
+            <Space style="@style/SpaceStyle" />
 
             <Button
                 android:id="@+id/b21"
@@ -183,9 +189,13 @@
                 style="@style/ButtonStyle"
                 tools:text="7" />
 
+            <Space style="@style/SpaceStyle" />
+
         </LinearLayout>
 
         <LinearLayout style="@style/ButtonLinearLayout">
+
+            <Space style="@style/SpaceStyle" />
 
             <Button
                 android:id="@+id/b31"
@@ -234,9 +244,13 @@
                 style="@style/ButtonStyle"
                 tools:text="7" />
 
+            <Space style="@style/SpaceStyle" />
+
         </LinearLayout>
 
         <LinearLayout style="@style/ButtonLinearLayout">
+
+            <Space style="@style/SpaceStyle" />
 
             <Button
                 android:id="@+id/b41"
@@ -285,9 +299,13 @@
                 style="@style/ButtonStyle"
                 tools:text="7" />
 
+            <Space style="@style/SpaceStyle" />
+
         </LinearLayout>
 
         <LinearLayout style="@style/ButtonLinearLayout">
+
+            <Space style="@style/SpaceStyle" />
 
             <Button
                 android:id="@+id/b51"
@@ -336,9 +354,13 @@
                 style="@style/ButtonStyle"
                 tools:text="7" />
 
+            <Space style="@style/SpaceStyle" />
+
         </LinearLayout>
 
         <LinearLayout style="@style/ButtonLinearLayout">
+
+            <Space style="@style/SpaceStyle" />
 
             <Button
                 android:id="@+id/b61"
@@ -387,9 +409,13 @@
                 style="@style/ButtonStyle"
                 tools:text="7" />
 
+            <Space style="@style/SpaceStyle" />
+
         </LinearLayout>
 
         <LinearLayout style="@style/ButtonLinearLayout">
+
+            <Space style="@style/SpaceStyle" />
 
             <Button
                 android:id="@+id/b71"
@@ -437,6 +463,8 @@
                 android:id="@+id/b77"
                 style="@style/ButtonStyle"
                 tools:text="7" />
+
+            <Space style="@style/SpaceStyle" />
 
         </LinearLayout>
 
