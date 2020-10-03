@@ -50,19 +50,25 @@ $ git clone https://github.com/Skill-Class/Tap-The-Unique.git
 ### Screenshots
 1) Start Screen
 
-![](https://github.com/Skill-Class/Tap-The-Unique/blob/master/Android%20Mobile%20%E2%80%93%203.png){ style="display: block; margin: 0 auto" }
+<div align="center">
+<img src="https://github.com/Skill-Class/Tap-The-Unique/blob/master/Android%20Mobile%20%E2%80%93%203.png" >
+</div>
 
 2) Instructions Screen
 
-![](https://github.com/Skill-Class/Tap-The-Unique/blob/master/Android%20Mobile%20%E2%80%93%206.png){ style="display: block; margin: 0 auto" }
+<div align="center">
+<img src="https://github.com/Skill-Class/Tap-The-Unique/blob/master/Android%20Mobile%20%E2%80%93%206.png" >
+</div>
 
 3) Game Screen
 
-![](https://github.com/Skill-Class/Tap-The-Unique/blob/master/Android%20Mobile%20%E2%80%93%204.png){ style="display: block; margin: 0 auto" }
+<div align="center">
+<img src="https://github.com/Skill-Class/Tap-The-Unique/blob/master/Android%20Mobile%20%E2%80%93%204.png" >
 
 4) Result Screen
 
-![](https://github.com/Skill-Class/Tap-The-Unique/blob/master/Android%20Mobile%20%E2%80%93%205.png){ style="display: block; margin: 0 auto" }
+<div align="center">
+<img src="https://github.com/Skill-Class/Tap-The-Unique/blob/master/Android%20Mobile%20%E2%80%93%205.png" >
 
 ### Contributing - Hacktoberfest 2020 🎃
 
