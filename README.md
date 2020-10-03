@@ -78,10 +78,7 @@ Congrats! 🎉 You are an awsome contributor! 🏆
 
 ## Contributors
 
-[![](https://github.com/ksheetal.png?size=50)](https://github.com/ksheetal)
-[![](https://github.com/deytulsi18.png?size=50)](https://github.com/deytulsi18)
-[![](https://github.com/IordanisKostelidis.png?size=50)](https://github.com/IordanisKostelidis)
-[![](https://github.com/RonakAggarwal.png?size=50)](https://github.com/RonakAggarwal)
+[![](https://contributors-img.web.app/image?repo=Skill-Class/Tap-The-Unique)](https://github.com/Skill-Class/Tap-The-Unique/graphs/contributors)
 
 ## Author 
 This project is authored and maintained by [Sheetal Kumar](https://github.com/ksheetal)
