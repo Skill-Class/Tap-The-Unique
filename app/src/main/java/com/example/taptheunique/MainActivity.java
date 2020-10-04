@@ -1,6 +1,9 @@
 package com.example.taptheunique;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.animation.Animator;
+import android.animation.AnimatorInflater;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -8,9 +11,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.Random;
 import java.util.Timer;
-public class MainActivity extends AppCompatActivity implements  View.OnClickListener{
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, Animator.AnimatorListener {
     private int score = 0;
     private int randomNumber, randomIndexX, randomIndexY, uniqueButtonId, uniqueNumber, counter = 30;
     private TextView scoreView, timerView;
@@ -31,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         timerView = (TextView) findViewById(R.id.timerView);
         new CountDownTimer(30000, 1000) {
@@ -55,31 +59,29 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
 
         callRandom();
 
-
     }
 
 
     private void callRandom() {
-
         Random rand = new Random();
         randomIndexX = rand.nextInt(7);
         randomIndexY = rand.nextInt(7);
         do {
             randomNumber = rand.nextInt(90) + 10;
             uniqueNumber = rand.nextInt(90) + 10;
-        }while (randomNumber==uniqueNumber);
+        } while (randomNumber == uniqueNumber);
 
-        for(int i=0;i<7;i++){
-            for (int j=0;j<7;j++){
+        for (int i = 0; i < 7; i++) {
+            for (int j = 0; j < 7; j++) {
                 button[i][j] = (Button) findViewById(idArray[i][j]);
-                if (i==randomIndexX && j==randomIndexY){
-                    button[i][j].setText(uniqueNumber+"");
+                if (i == randomIndexX && j == randomIndexY) {
+                    button[i][j].setText(uniqueNumber + "");
                     uniqueButtonId = idArray[i][j];
-                }
-                else{
-                    button[i][j].setText(randomNumber+"");
+                } else {
+                    button[i][j].setText(randomNumber + "");
                 }
                 button[i][j].setOnClickListener((View.OnClickListener) this);
+                translateAnimation(button[i][j]);
             }
         }
     }
@@ -87,23 +89,49 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
     @Override
     public void onClick(View v) {
 
-        if(v.getId() == uniqueButtonId){
+        if (v.getId() == uniqueButtonId) {
             //  Toast.makeText(game5_old.this,"Correct",Toast.LENGTH_LONG).show();
-            score+=5;
-        }
-        else{
+            score += 5;
+        } else {
             //    Toast.makeText(game5_old.this,"InCorrect",Toast.LENGTH_LONG).show();
         }
-        scoreView.setText(score+"");
+        scoreView.setText(score + "");
         callRandom();
 
     }
+
     @Override
     public void onBackPressed() {
         // super.onBackPressed();
         //finishAffinity();
         // finish();
-        Toast.makeText(getApplicationContext(),"Back button is disabled",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Back button is disabled", Toast.LENGTH_SHORT).show();
     }
 
+    public void translateAnimation(View view) {
+        Animator translator = AnimatorInflater.loadAnimator(this, R.animator.translator);
+        translator.setTarget(view);
+        translator.addListener(this);
+        translator.start();
+    }
+
+    @Override
+    public void onAnimationStart(Animator animator) {
+
+    }
+
+    @Override
+    public void onAnimationEnd(Animator animator) {
+
+    }
+
+    @Override
+    public void onAnimationCancel(Animator animator) {
+
+    }
+
+    @Override
+    public void onAnimationRepeat(Animator animator) {
+
+    }
 }
