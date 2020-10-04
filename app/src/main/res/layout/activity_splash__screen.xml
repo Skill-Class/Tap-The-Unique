@@ -45,7 +45,6 @@
         android:layout_marginTop="100dp"
         android:fontFamily="@font/montserrat"
         android:text="©Skill-Class"
-        android:textColor="@color/Black"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
