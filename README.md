@@ -1,3 +1,4 @@
+
 # Tap The Unique Game
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://www.firsttimersonly.com/)
@@ -15,9 +16,9 @@ This is a simple android game that tests the concentration of the child based on
 
 -   [Prerequisites](#prerequisites)
 -   [Installation](#installation)
--   [How to play](#howtoplay)
--   [Contributing - Hacktoberfest 2020](#contributinghacktoberfest2020)
--   [How to Contribute?](#howtocontribute)
+-   [How to play](#how-to-play)
+-   [Contributing Hacktoberfest 2020](#contributing-hacktoberfest-2020)
+-   [How to Contribute?](#how-to-contribute)
 -   [Contributors](#contributors)
 
 ### Prerequisites
@@ -38,8 +39,7 @@ Open your terminal/ GitBash and run this command
 $ git clone https://github.com/Skill-Class/Tap-The-Unique.git
 ```
 
-### How to Play 🤔
-
+### How to Play 
  - User can choose mode of the game play among ***Easy***, ***Medium***, ***Hard***
  - Also the time span among ***30 seconds*** and ***60 seconds***
  - There is a matrix of where each cell consists of a number.
@@ -72,7 +72,7 @@ $ git clone https://github.com/Skill-Class/Tap-The-Unique.git
 <img src="https://github.com/Skill-Class/Tap-The-Unique/blob/master/Android%20Mobile%20%E2%80%93%205.png" >
 </div>
 
-### Contributing - Hacktoberfest 2020 🎃
+### Contributing Hacktoberfest 2020 
 
 Want to contribute? Great!😎
 
