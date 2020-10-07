@@ -2,8 +2,6 @@ package com.example.taptheunique;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.animation.Animator;
-import android.animation.AnimatorInflater;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -15,7 +13,7 @@ import android.widget.Toast;
 import java.util.Random;
 import java.util.Timer;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, Animator.AnimatorListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private int score = 0;
     private int randomNumber, randomIndexX, randomIndexY, uniqueButtonId, uniqueNumber, counter = 30;
     private TextView scoreView, timerView;
@@ -61,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-
     private void callRandom() {
         Random rand = new Random();
         randomIndexX = rand.nextInt(7);
@@ -81,7 +78,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     button[i][j].setText(randomNumber + "");
                 }
                 button[i][j].setOnClickListener((View.OnClickListener) this);
-                translateAnimation(button[i][j]);
             }
         }
     }
@@ -108,30 +104,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(getApplicationContext(), "Back button is disabled", Toast.LENGTH_SHORT).show();
     }
 
-    public void translateAnimation(View view) {
-        Animator translator = AnimatorInflater.loadAnimator(this, R.animator.translator);
-        translator.setTarget(view);
-        translator.addListener(this);
-        translator.start();
-    }
-
-    @Override
-    public void onAnimationStart(Animator animator) {
-
-    }
-
-    @Override
-    public void onAnimationEnd(Animator animator) {
-
-    }
-
-    @Override
-    public void onAnimationCancel(Animator animator) {
-
-    }
-
-    @Override
-    public void onAnimationRepeat(Animator animator) {
-
-    }
 }
