@@ -1,6 +1,7 @@
 package com.example.taptheunique;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -8,11 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.Random;
 import java.util.Timer;
-public class MainActivity extends AppCompatActivity implements  View.OnClickListener{
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private int score = 0;
-    private int randomNumber, randomIndexX, randomIndexY, uniqueButtonId, uniqueNumber, counter1 = 30,counter2=60;
+    private int randomNumber, randomIndexX, randomIndexY, uniqueButtonId, uniqueNumber, counter1 = 30, counter2 = 60;
     private TextView scoreView, timerView;
     private static final int[][] idArray = {{R.id.b11, R.id.b12, R.id.b13, R.id.b14, R.id.b15, R.id.b16, R.id.b17},
             {R.id.b21, R.id.b22, R.id.b23, R.id.b24, R.id.b25, R.id.b26, R.id.b27},
@@ -26,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
     private static final Button[][] button = new Button[7][8];
 
     Timer timer;
-    String level;
+    int level;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +39,14 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         //Intent intent = getIntent();
         //level=intent.getStringExtra("levelValue");
         Bundle bundle = getIntent().getExtras();
-        String time = bundle.getString("timeValue");
-        String level = bundle.getString("levelValue");
+        int time = bundle.getInt("timeValue");
+        level = bundle.getInt("levelValue");
 
-        Toast.makeText(MainActivity.this,time+level,Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, "" + time + level, Toast.LENGTH_LONG).show();
 
+        timerView = findViewById(R.id.timerView);
 
-        timerView = (TextView) findViewById(R.id.timerView);
-
-        if (Integer.valueOf(time)==1) {
+        if (time == 1) {
             new CountDownTimer(30000, 1000) {
                 @Override
                 public void onTick(long millisUntilFinished) {
@@ -60,8 +62,8 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
                     // finish();
                 }
             }.start();
-        }
-        else if (Integer.valueOf(time)==2){
+
+        } else if (time == 2) {
             new CountDownTimer(60000, 1000) {
                 @Override
                 public void onTick(long millisUntilFinished) {
@@ -79,53 +81,47 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
             }.start();
         }
 
-        scoreView = (TextView) findViewById(R.id.scoreView);
+        scoreView = findViewById(R.id.scoreView);
         scoreView.setText(score + "");
 
-        callRandom(Integer.valueOf(level));
-
+        callRandom(level);
 
     }
 
-
     private void callRandom(int level) {
-
 
         Random rand = new Random();
         randomIndexX = rand.nextInt(7);
         randomIndexY = rand.nextInt(7);
 
-        if (level==1){
+        if (level == 1) {
 
             do {
                 randomNumber = rand.nextInt(10);
                 uniqueNumber = rand.nextInt(10);
-            }while (randomNumber==uniqueNumber);
+            } while (randomNumber == uniqueNumber);
 
-        }
-        else if (level==2){
+        } else if (level == 2) {
             do {
                 randomNumber = rand.nextInt(90) + 10;
                 uniqueNumber = rand.nextInt(90) + 10;
-            }while (randomNumber==uniqueNumber);
-        }
-        else if(level==3){
+            } while (randomNumber == uniqueNumber);
+        } else if (level == 3) {
             do {
                 randomNumber = rand.nextInt(90) + 10;
-                int roundTen=randomNumber/10;
-                uniqueNumber = rand.nextInt(10) + (roundTen*10);
-            }while (randomNumber==uniqueNumber);
+                int roundTen = randomNumber / 10;
+                uniqueNumber = rand.nextInt(10) + (roundTen * 10);
+            } while (randomNumber == uniqueNumber);
         }
 
-        for(int i=0;i<7;i++){
-            for (int j=0;j<7;j++){
+        for (int i = 0; i < 7; i++) {
+            for (int j = 0; j < 7; j++) {
                 button[i][j] = (Button) findViewById(idArray[i][j]);
-                if (i==randomIndexX && j==randomIndexY){
-                    button[i][j].setText(uniqueNumber+"");
+                if (i == randomIndexX && j == randomIndexY) {
+                    button[i][j].setText(uniqueNumber + "");
                     uniqueButtonId = idArray[i][j];
-                }
-                else{
-                    button[i][j].setText(randomNumber+"");
+                } else {
+                    button[i][j].setText(randomNumber + "");
                 }
                 button[i][j].setOnClickListener((View.OnClickListener) this);
             }
@@ -135,23 +131,22 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
     @Override
     public void onClick(View v) {
 
-        if(v.getId() == uniqueButtonId){
+        if (v.getId() == uniqueButtonId) {
             //  Toast.makeText(game5_old.this,"Correct",Toast.LENGTH_LONG).show();
-            score+=5;
-        }
-        else{
+            score += 5;
+        } else {
             //    Toast.makeText(game5_old.this,"InCorrect",Toast.LENGTH_LONG).show();
         }
-        scoreView.setText(score+"");
-        callRandom(Integer.valueOf(level));
-
+        scoreView.setText(score + "");
+        callRandom(level);
     }
+
     @Override
     public void onBackPressed() {
         // super.onBackPressed();
         //finishAffinity();
         // finish();
-        Toast.makeText(getApplicationContext(),"Back button is disabled",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Back button is disabled", Toast.LENGTH_SHORT).show();
     }
 
 }
