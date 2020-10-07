@@ -15,7 +15,7 @@ import java.util.Timer;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private int score = 0;
-    private int randomNumber, randomIndexX, randomIndexY, uniqueButtonId, uniqueNumber, counter = 30;
+    private int randomNumber, randomIndexX, randomIndexY, uniqueButtonId, uniqueNumber, counter1 = 30, counter2 = 60;
     private TextView scoreView, timerView;
     private static final int[][] idArray = {{R.id.b11, R.id.b12, R.id.b13, R.id.b14, R.id.b15, R.id.b16, R.id.b17},
             {R.id.b21, R.id.b22, R.id.b23, R.id.b24, R.id.b25, R.id.b26, R.id.b27},
@@ -29,44 +29,90 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final Button[][] button = new Button[7][8];
 
     Timer timer;
+    int level;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        timerView = (TextView) findViewById(R.id.timerView);
-        new CountDownTimer(30000, 1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                timerView.setText(String.valueOf(counter));
-                counter--;
-            }
+        //Intent intent = getIntent();
+        //level=intent.getStringExtra("levelValue");
+        Bundle bundle = getIntent().getExtras();
+        int time = bundle.getInt("timeValue");
+        level = bundle.getInt("levelValue");
 
-            @Override
-            public void onFinish() {
-                Intent intent = new Intent(MainActivity.this, ResultActivity.class);
-                intent.putExtra("Score", String.valueOf(score));
-                startActivity(intent);
-                // finish();
-            }
-        }.start();
+        Toast.makeText(MainActivity.this, "" + time + level, Toast.LENGTH_LONG).show();
 
-        scoreView = (TextView) findViewById(R.id.scoreView);
+        timerView = findViewById(R.id.timerView);
+
+        if (time == 1) {
+            new CountDownTimer(30000, 1000) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    timerView.setText(String.valueOf(counter1));
+                    counter1--;
+                }
+
+                @Override
+                public void onFinish() {
+                    Intent intent = new Intent(MainActivity.this, ResultActivity.class);
+                    intent.putExtra("Score", String.valueOf(score));
+                    startActivity(intent);
+                    // finish();
+                }
+            }.start();
+
+        } else if (time == 2) {
+            new CountDownTimer(60000, 1000) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    timerView.setText(String.valueOf(counter2));
+                    counter2--;
+                }
+
+                @Override
+                public void onFinish() {
+                    Intent intent = new Intent(MainActivity.this, ResultActivity.class);
+                    intent.putExtra("Score", String.valueOf(score));
+                    startActivity(intent);
+                    // finish();
+                }
+            }.start();
+        }
+
+        scoreView = findViewById(R.id.scoreView);
         scoreView.setText(score + "");
 
-        callRandom();
+        callRandom(level);
 
     }
 
-    private void callRandom() {
+    private void callRandom(int level) {
+
         Random rand = new Random();
         randomIndexX = rand.nextInt(7);
         randomIndexY = rand.nextInt(7);
-        do {
-            randomNumber = rand.nextInt(90) + 10;
-            uniqueNumber = rand.nextInt(90) + 10;
-        } while (randomNumber == uniqueNumber);
+
+        if (level == 1) {
+
+            do {
+                randomNumber = rand.nextInt(10);
+                uniqueNumber = rand.nextInt(10);
+            } while (randomNumber == uniqueNumber);
+
+        } else if (level == 2) {
+            do {
+                randomNumber = rand.nextInt(90) + 10;
+                uniqueNumber = rand.nextInt(90) + 10;
+            } while (randomNumber == uniqueNumber);
+        } else if (level == 3) {
+            do {
+                randomNumber = rand.nextInt(90) + 10;
+                int roundTen = randomNumber / 10;
+                uniqueNumber = rand.nextInt(10) + (roundTen * 10);
+            } while (randomNumber == uniqueNumber);
+        }
 
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 7; j++) {
@@ -92,8 +138,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //    Toast.makeText(game5_old.this,"InCorrect",Toast.LENGTH_LONG).show();
         }
         scoreView.setText(score + "");
-        callRandom();
-
+        callRandom(level);
     }
 
     @Override
