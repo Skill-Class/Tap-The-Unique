@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Tap The Unique</string>
+    <string name="tap_the_unique">Tap The Unique</string>
+    <string name="time_left">Time Left:&#160;</string>
+    <string name="score">Score:&#160;</string>
+    <string name="game_info">There is a matrix of where each cell consists of a number. All the numbers looks same but there is a unique number which is different of all others. In the time span of 30 seconds, you have to select maximum unique numbers to maximize your score. For each correct selection, You will be rewarded 5 points. \n\n @Skill-Class</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="_30_seconds">30 Seconds</string>
+    <string name="_60_seconds">60 Seconds</string>
+    <string name="start_game">Start Game</string>
 </resources>
