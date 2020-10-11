@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final Button[][] button = new Button[7][8];
 
     Timer timer;
-    int level;
+    int level,time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Intent intent = getIntent();
         //level=intent.getStringExtra("levelValue");
         Bundle bundle = getIntent().getExtras();
-        int time = bundle.getInt("timeValue");
+        time = bundle.getInt("timeValue");
         level = bundle.getInt("levelValue");
-
-        Toast.makeText(MainActivity.this, "" + time + level, Toast.LENGTH_LONG).show();
-
         timerView = findViewById(R.id.timerView);
 
         if (time == 1) {
@@ -132,10 +129,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         if (v.getId() == uniqueButtonId) {
-            //  Toast.makeText(game5_old.this,"Correct",Toast.LENGTH_LONG).show();
             score += 5;
-        } else {
-            //    Toast.makeText(game5_old.this,"InCorrect",Toast.LENGTH_LONG).show();
         }
         scoreView.setText(score + "");
         callRandom(level);
@@ -143,9 +137,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onBackPressed() {
-        // super.onBackPressed();
-        //finishAffinity();
-        // finish();
         Toast.makeText(getApplicationContext(), "Back button is disabled", Toast.LENGTH_SHORT).show();
     }
 
