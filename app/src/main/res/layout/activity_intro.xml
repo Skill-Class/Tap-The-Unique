@@ -41,6 +41,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="16dp"
             android:layout_margin="20dp"
             android:orientation="horizontal">
 
@@ -49,6 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
+                android:fontFamily="@font/montserrat"
                 android:background="@drawable/button_background"
                 android:text="@string/easy" />
 
@@ -56,6 +58,7 @@
                 android:id="@+id/mediumButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/button_background"
                 android:text="@string/medium" />
@@ -65,6 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
+                android:fontFamily="@font/montserrat"
                 android:background="@drawable/button_background"
                 android:text="@string/hard" />
 
@@ -73,7 +77,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/easyButton"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:fontFamily="@font/montserrat"
                 android:layout_toStartOf="@id/mediumButton"
                 android:background="@drawable/button_background"
                 android:text="@string/_30_seconds" />
@@ -82,10 +88,13 @@
                 android:id="@+id/timeButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/mediumButton"
-                android:layout_marginTop="10dp"
+                android:layout_below="@+id/hardButton"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="19dp"
                 android:layout_toEndOf="@id/mediumButton"
                 android:background="@drawable/button_background"
+                android:fontFamily="@font/montserrat"
+                android:padding="16dp"
                 android:text="@string/_60_seconds" />
 
         </RelativeLayout>
