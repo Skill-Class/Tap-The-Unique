@@ -148,9 +148,6 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
     }
     @Override
     public void onBackPressed() {
-        // super.onBackPressed();
-        //finishAffinity();
-        // finish();
         Toast.makeText(getApplicationContext(),"Back button is disabled",Toast.LENGTH_SHORT).show();
     }
 
